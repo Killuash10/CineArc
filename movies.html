@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - CineArc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">CineArc</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="trending.html">Trending</a></li>
+                <li><a href="movies.html" class="active">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search movies...">
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>All Movies</h1>
+        <p>Discover thousands of movies from different genres</p>
+    </div>
+
+    <!-- Filter Options -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <select id="genreFilter" class="filter-select">
+                <option value="all">All Genres</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="thriller">Thriller</option>
+            </select>
+            <select id="yearFilter" class="filter-select">
+                <option value="all">All Years</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+            </select>
+            <select id="ratingFilter" class="filter-select">
+                <option value="all">All Ratings</option>
+                <option value="9">9+ Stars</option>
+                <option value="8">8+ Stars</option>
+                <option value="7">7+ Stars</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Movies Grid -->
+    <section class="movie-section">
+        <div class="movie-grid" id="moviesGrid">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Movie Modal -->
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-poster" id="modalPoster"></div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span class="rating" id="modalRating"></span>
+                        <span id="modalYear"></span>
+                        <span id="modalGenre"></span>
+                    </div>
+                    <p id="modalDescription"></p>
+                    <button class="btn play-btn" onclick="playMovie()">▶ Play Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CineStream</h3>
+                <p>Your ultimate destination for movies and TV shows.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineArc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="movies.js"></script>
+</body>
+</html>
